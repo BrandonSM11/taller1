@@ -1,5 +1,3 @@
-// app/page.tsx
-
 // ---- Interfaces ----
 interface Characteristics {
   color: string;
@@ -43,7 +41,7 @@ interface User {
   createdAt: string;
 }
 
-// ---- Categorías ----
+// ---- Categories ----
 const electronics: Category = { id: 1, name: "Electronics" };
 const fashion: Category = { id: 2, name: "Fashion" };
 const food: Category = { id: 3, name: "Food" };
