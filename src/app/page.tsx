@@ -11,6 +11,7 @@ interface Category {
 }
 
 interface Product {
+  id: number;  
   name: string;
   brand: string;
   quantity: number;
@@ -47,9 +48,9 @@ const fashion: Category = { id: 2, name: "Fashion" };
 const food: Category = { id: 3, name: "Food" };
 const home: Category = { id: 4, name: "Home" };
 
-
 const products: Product[] = [
   {
+    id: 1,
     name: "iPhone 15",
     brand: "Apple",
     quantity: 10,
@@ -66,6 +67,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 2,
     name: "MacBook Air",
     brand: "Apple",
     quantity: 5,
@@ -82,6 +84,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 3,
     name: "iPad Pro",
     brand: "Apple",
     quantity: 7,
@@ -98,6 +101,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 4,
     name: "Galaxy S23",
     brand: "Samsung",
     quantity: 8,
@@ -114,6 +118,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 5,
     name: "Galaxy Tab S9",
     brand: "Samsung",
     quantity: 6,
@@ -130,6 +135,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 6,
     name: "Galaxy Watch 6",
     brand: "Samsung",
     quantity: 10,
@@ -146,6 +152,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 7,
     name: "Neverfull MM Bag",
     brand: "Louis Vuitton",
     quantity: 3,
@@ -162,6 +169,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 8,
     name: "LV Sunglasses",
     brand: "Louis Vuitton",
     quantity: 5,
@@ -178,6 +186,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 9,
     name: "LV Wallet",
     brand: "Louis Vuitton",
     quantity: 7,
@@ -194,6 +203,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 10,
     name: "Big Mac Combo",
     brand: "McDonald's",
     quantity: 15,
@@ -210,6 +220,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 11,
     name: "Fried Chicken Combo",
     brand: "Frisby",
     quantity: 12,
@@ -226,6 +237,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 12,
     name: "Caffe Latte",
     brand: "Starbucks",
     quantity: 20,
@@ -242,6 +254,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 13,
     name: "Olla Express",
     brand: "Imusa",
     quantity: 10,
@@ -258,6 +271,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 14,
     name: "Mini Licuadora",
     brand: "Kalley",
     quantity: 8,
@@ -274,6 +288,7 @@ const products: Product[] = [
     }
   },
   {
+    id: 15,
     name: "Cocina 4 Hornillas",
     brand: "Haceb",
     quantity: 5,
@@ -370,14 +385,15 @@ const users: User[] = [
   }
 ];
 
-
 export default function Home() {
   return (
     <div className="container">
       <h1 className="catalog-title">Products Catalog</h1>
       <div className="products-grid">
-        {products.map((product, index) => (
-          <div key={index} className="product-card">
+
+        {products.map((product) => (
+          <div key={product.id} className="product-card">
+            
             <h3>{product.name}</h3>
             <p><strong>Brand:</strong> {product.brand}</p>
             <p><strong>Price:</strong> {product.price} {product.currency}</p>
@@ -397,4 +413,3 @@ export default function Home() {
     </div>
   );
 }
-
