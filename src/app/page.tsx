@@ -1,8 +1,8 @@
 // ---- Interfaces ----
 interface Characteristics {
-  color: string;
+  color?: string;
   material: string;
-  warranty: string;
+  warranty?: string;
 }
 
 interface Category {
@@ -43,26 +43,38 @@ interface User {
 }
 
 // ---- Categories ----
-const electronics: Category = { id: 1, name: "Electronics" };
-const fashion: Category = { id: 2, name: "Fashion" };
-const food: Category = { id: 3, name: "Food" };
-const home: Category = { id: 4, name: "Home" };
+const electronics: Category = {
+  id: 1,
+  name: "Electronics"
+ };
+const fashion: Category = { 
+  id: 2, 
+  name: "Fashion" 
+ };
+const food: Category = { 
+  id: 3,
+  name: "Food" 
+};
+const home: Category = { 
+  id: 4,
+  name: "Home" 
+};
 
 const products: Product[] = [
   {
     id: 1,
-    name: "iPhone 15",
+    name: "iPhone 17 PRO MAX",
     brand: "Apple",
     quantity: 10,
-    price: 1200,
+    price: 1500,
     currency: "USD",
     isActive: true,
     category: electronics,
     imageUrl: "",
     createdAt: "2025-09-13",
     characteristics: {
-      color: "Black",
-      material: "Glass/Aluminum",
+      color: "  Oranje",
+      material: "Aluminum",
       warranty: "1 year"
     }
   },
@@ -165,7 +177,7 @@ const products: Product[] = [
     characteristics: {
       color: "Brown",
       material: "Leather",
-      warranty: "N/A"
+      
     }
   },
   {
@@ -182,7 +194,6 @@ const products: Product[] = [
     characteristics: {
       color: "Black",
       material: "Plastic/Metal",
-      warranty: "N/A"
     }
   },
   {
@@ -197,9 +208,8 @@ const products: Product[] = [
     imageUrl: "",
     createdAt: "2025-09-13",
     characteristics: {
-      color: "Brown",
+      color: "Black",
       material: "Leather",
-      warranty: "N/A"
     }
   },
   {
@@ -214,9 +224,7 @@ const products: Product[] = [
     imageUrl: "",
     createdAt: "2025-09-13",
     characteristics: {
-      color: "N/A",
       material: "Food",
-      warranty: "N/A"
     }
   },
   {
@@ -231,9 +239,7 @@ const products: Product[] = [
     imageUrl: "",
     createdAt: "2025-09-13",
     characteristics: {
-      color: "N/A",
       material: "Food",
-      warranty: "N/A"
     }
   },
   {
@@ -248,14 +254,12 @@ const products: Product[] = [
     imageUrl: "",
     createdAt: "2025-09-13",
     characteristics: {
-      color: "N/A",
-      material: "Food",
-      warranty: "N/A"
+      material: "Food"
     }
   },
   {
     id: 13,
-    name: "Olla Express",
+    name: "Pressure Cooker",
     brand: "Imusa",
     quantity: 10,
     price: 50,
@@ -272,7 +276,7 @@ const products: Product[] = [
   },
   {
     id: 14,
-    name: "Mini Licuadora",
+    name: "Mini Blender",
     brand: "Kalley",
     quantity: 8,
     price: 35,
@@ -289,7 +293,7 @@ const products: Product[] = [
   },
   {
     id: 15,
-    name: "Cocina 4 Hornillas",
+    name: "Stove",
     brand: "Haceb",
     quantity: 5,
     price: 250,
